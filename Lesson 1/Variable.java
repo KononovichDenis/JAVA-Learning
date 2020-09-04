@@ -1,20 +1,21 @@
-public class Variable{
+public class Variable {
 	public static void main(String[] args) {
-		byte cpucore = 4;
-		short hddfree = 464;
-		int ram = 8;
-		long hddused = 677824307;
-		float pi = 3.14f;
-		double corespeed = 3.3000d; 
-		char c = 'i';
-		boolean fan = true;
-		System.out.println("Переменная cpucore (byte) = " + cpucore);
-		System.out.println("Переменная hddfree (short) = " + hddfree);
-		System.out.println("Переменная ram (int) = " + ram);
-		System.out.println("Переменная hddused (long) = " + hddused);
-		System.out.println("Переменная pi (float) = " + pi);
-		System.out.println("Переменная corespeed (double) = " + corespeed);
-		System.out.println("Переменная c (char) = " + c);
-		System.out.println("Переменная fan (boolean) = " + fan);
+		byte numberOfCpuCore = 4;
+		short hddFreeSpace = 464;
+		int sumRam = 8;
+		long hddUsedSpace = 677824307;
+		float cacheCpu = 3.10f;
+		double coreSpeed = 3.3000d; 
+		char firstCpuLetterBrand = 'i';
+		boolean fanModeCpu = true;
+
+		System.out.println("Количество ядер процессора = " + numberOfCpuCore);
+		System.out.println("Свободного места на HDD (ГБ) = " + hddFreeSpace);
+		System.out.println("Количество ОЗУ (ГБ) = " + sumRam);
+		System.out.println("Количество занятого места на HDD (Байт) = " + hddUsedSpace);
+		System.out.println("Кэш процессора (МБ) = " + cacheCpu);
+		System.out.println("Частота процессора (ГГц) = " + coreSpeed);
+		System.out.println("Первая буква в названии процессора = " + firstCpuLetterBrand);
+		System.out.println("Активен ли FanMode для кулера = " + fanModeCpu);
 	}
 }
