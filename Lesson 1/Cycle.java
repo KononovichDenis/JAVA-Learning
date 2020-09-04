@@ -5,25 +5,24 @@ public class Cycle {
 			System.out.println(i);
 		}
 
-		System.out.println("");
-		System.out.println("Цикл while:");
-		int k = 6;
-		while (k >=- 6) {
-			System.out.println(k);
-			k-=2;
+		System.out.println("\nЦикл while:");
+		int minZ = 6;
+		int maxZ = -6;
+		while (minZ >= maxZ) {
+			System.out.println(minZ);
+			minZ -= 2;
 		}
 
-		int l = 10;
+		System.out.println("\nЦикл do-while:");
+		int min = 10;
+		int max = 20;
 		int sum = 0;
-		System.out.println("");
-		System.out.println("Цикл do-while:");
 		do {
-				l++;
-				if (l % 2 != 0) {
-					sum = sum + l;
-					/*System.out.println(l);*/
-				}
-		} while (l < 20);
+			min++;
+			if (min % 2 != 0 & min <= max) {
+				sum += min;
+			}
+		} while (min <= max);
 		System.out.println("Сумма нечетных чисел от 10 до 20 = " + sum);
 	}
 }
