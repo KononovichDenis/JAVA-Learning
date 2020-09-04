@@ -8,7 +8,7 @@ public class Cycle {
 		System.out.println("");
 		System.out.println("Цикл while:");
 		int k = 6;
-		while (k>=-6) {
+		while (k >=- 6) {
 			System.out.println(k);
 			k-=2;
 		}
@@ -23,7 +23,7 @@ public class Cycle {
 					sum = sum + l;
 					/*System.out.println(l);*/
 				}
-		} while (l<20);
+		} while (l < 20);
 		System.out.println("Сумма нечетных чисел от 10 до 20 = " + sum);
 	}
 }
