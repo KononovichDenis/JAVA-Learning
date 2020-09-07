@@ -1,25 +1,23 @@
 public class MyFirstGame {
 	public static void main(String[] args) {
-		int numberComp = 55;
-		int startNumberPlayer = 0;
+		int сompNumber = 0;
+		int playerNumber = 2;
 
 		System.out.println("Игра 'Угадай число'");
-		System.out.println("Ваше число = " + startNumberPlayer);
+		System.out.println("Ваше число = " + playerNumber);
 		do {
 			int i = 0; i++;
-			if (startNumberPlayer > numberComp) {
+			if (playerNumber > сompNumber) {
 				System.out.println("Введенное вами число больше того, что загадал компьютер");
-				startNumberPlayer -= i;
-				System.out.println("Ваше число = " + startNumberPlayer);
+				playerNumber--;
+				System.out.println("Ваше число = " + playerNumber);
 			}
-			if (startNumberPlayer < numberComp) {
+			else if (playerNumber < сompNumber) {
 				System.out.println("Введенное вами число меньше того, что загадал компьютер");
-				startNumberPlayer += i;
-				System.out.println("Ваше число = " + startNumberPlayer);
-			} 
-		} while (!(startNumberPlayer == numberComp));
-		if (startNumberPlayer == numberComp) {
-				System.out.println("Вы угадали!");
-		}
+				playerNumber++;
+				System.out.println("Ваше число = " + playerNumber);
+			}
+		} while (playerNumber != сompNumber);
+		System.out.println("Вы угадали!");
 	}
 }

@@ -6,11 +6,10 @@ public class Cycle {
 		}
 
 		System.out.println("\nЦикл while:");
-		int minZ = 6;
-		int maxZ = -6;
-		while (minZ >= maxZ) {
-			System.out.println(minZ);
-			minZ -= 2;
+		int counter = 6;
+		while (counter >= -6) {
+			System.out.println(counter);
+			counter -= 2;
 		}
 
 		System.out.println("\nЦикл do-while:");
