@@ -1,7 +1,7 @@
 public class Unicode {
 	public static void main(String[] args) {
-		for (int startNumber = 33; startNumber <= 126; startNumber++) {
-			System.out.print((char) startNumber + " ");
+		for (int i = 33; i <= 126; i++) {
+			System.out.print((char) i + " ");
 		}
 	}
 }
