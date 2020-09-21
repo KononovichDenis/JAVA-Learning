@@ -22,7 +22,7 @@ public class Person {
 
 	}
 
-	boolean learnJava () {
+	boolean learnJava() {
 		return true;
 	}
 }
