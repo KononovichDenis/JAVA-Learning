@@ -18,7 +18,7 @@ public class Wolf {
 		return nickName;
 	}
 
-	public void setNickName(String gender) {
+	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
 
