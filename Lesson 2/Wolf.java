@@ -1,10 +1,10 @@
 public class Wolf {
 
-	private String gender = "he-wolf";
-	private String nickName = "Wolfie";
-	private int weight = 25;
-	private int age = 5;
-	private String coloring = "gray";
+	private String gender;
+	private String nickName;
+	private int weight;
+	private int age;
+	private String coloring;
 
 	public String getGender() {
 		return gender;
@@ -22,7 +22,7 @@ public class Wolf {
 		this.nickName = nickName;
 	}
 
-	public int weight() {
+	public int getWeight() {
 		return weight;
 	}
 
@@ -30,7 +30,7 @@ public class Wolf {
 		this.weight = weight;
 	}
 
-	public int age() {
+	public int getAge() {
 		return age;
 	}
 
