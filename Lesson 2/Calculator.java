@@ -32,20 +32,20 @@ public class Calculator {
 			switch(mathSign) {
 				case '+':
 					System.out.println(numberOne + numberTwo);
-				break;
+					break;
 				case '-':
 					System.out.println(numberOne - numberTwo);
-				break;
+					break;
 				case '*':
 					System.out.println(numberOne * numberTwo);
-				break;
+					break;
 				case '/':
 					if (numberTwo > 0) {
 						System.out.println(numberOne / numberTwo);
 					} else {
 						System.out.println("Нельзя делить на 0!");
 					}
-				break;
+					break;
 				case '^':
 					if (numberTwo > 0) {
 						int degree = 1;
@@ -54,10 +54,10 @@ public class Calculator {
 						}
 						System.out.println(degree);
 					}
-				break;
+					break;
 				case '%':
 					System.out.println(numberOne % numberTwo);
-				break;
+					break;
 				default:
 					System.out.println("Числа не явлются положительными и/или целыми!");
 			}			
