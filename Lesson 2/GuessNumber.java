@@ -1,31 +1,50 @@
-import java.lang.Math;
+import java.util.Random;
+import java.util.Scanner;
 
 public class GuessNumber {
 
-		public int сompNumber = 10;
-		public int generateCompNumber(int min, int max) {
-			min = 0;
-			max = 100;
-			return min + (int)(Math.random() * ((max - min) + 1));
-		}
+	Scanner sc = new Scanner(System.in);
+	private int max = 100;
+	private int compNumber = compNumber(max);
+	private Player playerOne;
+	private Player playerTwo;
+	private int guessNumber;
 
-		/*Player playerOne = new Player();*/
+	public GuessNumber(Player playerOne, Player playerTwo) {
+		this.playerOne = playerOne;
+		this.playerTwo = playerTwo;
+	}
 
-		public void play() {
-			playerOne.getNumber();
-			playerTwo.getNumber();
+	public static int compNumber(int max)
+	{
+		return (int) (Math.random() * ++max);
+	}
 
-			System.out.println("Число компьютера " + compNumber);
-			System.out.println("START!");
-			System.out.println("Число игрока 1 " + playerOne.getNumber());
-			System.out.println("Число игрока 2 " + playerTwo.getNumber());
-			do {
-			if ((playerOne.getNumber() || playerTwo.getNumber()) > сompNumber) {
-				System.out.println("Введенное вами число больше того, что загадал компьютер");
-			} else if ((playerOne.getNumber() || playerTwo.getNumber()) < сompNumber) {
-				System.out.println("Введенное вами число меньше того, что загадал компьютер");
+	public void play() {
+		do {
+			System.out.print(playerOne.getName() + ", введите ваше число: ");
+			playerOne.setNumber(sc.nextInt());
+
+			System.out.print(playerTwo.getName() + ", введите ваше число: ");
+			playerTwo.setNumber(sc.nextInt());
+
+			if (playerOne.getNumber() > compNumber) {
+				System.out.println(playerOne.getName() + ", введенное вами число больше того, что загадал компьютер");
+			} else if (playerOne.getNumber() < compNumber) {
+				System.out.println(playerOne.getName() + ", введенное вами число меньше того, что загадал компьютер");
+			} else if (playerOne.getNumber() == compNumber) {
+				System.out.println(playerOne.getName() + ", вы угадали!");
+				return;
 			}
-			} while ((playerOne.getNumber() || playerTwo.getNumber()) != сompNumber);
-			System.out.println("Вы угадали!");
-		}
+
+			if (playerTwo.getNumber() > compNumber) {
+				System.out.println(playerTwo.getName() + ", введенное вами число больше того, что загадал компьютер");
+			} else if (playerTwo.getNumber() < compNumber) {
+				System.out.println(playerTwo.getName() + ", введенное вами число меньше того, что загадал компьютер");
+			} else if (playerTwo.getNumber() == compNumber) {
+				System.out.println(playerTwo.getName() + ", вы угадали!");
+				return;
+			}
+		} while ((playerOne.getNumber() != compNumber) || (playerTwo.getNumber() != compNumber));
+	}
 }
