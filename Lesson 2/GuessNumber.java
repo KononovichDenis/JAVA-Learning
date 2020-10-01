@@ -15,7 +15,7 @@ public class GuessNumber {
 	private int max = 100;
 	private int generateGuessNumber = generateGuessNumber(max);
 	public static int generateGuessNumber(int max) {
-		return (int) (Math.random() * max);
+		return (int) (Math.random() * ++max);
 	}
 
 	public void play() {
