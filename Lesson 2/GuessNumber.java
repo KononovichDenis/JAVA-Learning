@@ -3,18 +3,18 @@ import java.util.Scanner;
 
 public class GuessNumber {
 
-	Scanner sc = new Scanner(System.in);
-	private Player playerOne;
-	private Player playerTwo;
-
 	public GuessNumber(Player playerOne, Player playerTwo) {
 		this.playerOne = playerOne;
 		this.playerTwo = playerTwo;
 	}
 
+	Scanner sc = new Scanner(System.in);
+	private Player playerOne;
+	private Player playerTwo;
+
 	private int max = 100;
 	private int generateGuessNumber = generateGuessNumber(max);
-	public static int generateGuessNumber(int max) {
+	public int generateGuessNumber(int max) {
 		return (int) (Math.random() * ++max);
 	}
 

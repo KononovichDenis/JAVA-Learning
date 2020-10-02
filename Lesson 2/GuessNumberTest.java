@@ -14,9 +14,7 @@ class GuessNumberTest {
 			Player playerTwo = new Player(sc.next());
 
 			GuessNumber guessNumber = new GuessNumber(playerOne, playerTwo);		
-
 			guessNumber.play();
-
 			do {
 				System.out.print("Хотите продолжить? [yes/no]: ");
 				userResponse = sc.next();

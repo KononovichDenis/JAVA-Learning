@@ -8,24 +8,12 @@ public class Calculator {
 			this.numberOne = numberOne;
 		}
 
-		public int getNumberOne() {
-			return numberOne;
-		}
-
 		public void setNumberTwo(int numberTwo) {
 			this.numberTwo = numberTwo;
 		}
 
-		public int getNumberTwo() {
-			return numberTwo;
-		}
-
 		public void setMathSign(char mathSign) {
 			this.mathSign = mathSign;
-		}
-
-		public int getMathSign() {
-			return mathSign;
 		}
 
 		public void calculate() {
