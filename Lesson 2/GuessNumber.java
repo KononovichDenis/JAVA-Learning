@@ -6,6 +6,7 @@ public class GuessNumber {
 	public GuessNumber(Player playerOne, Player playerTwo) {
 		this.playerOne = playerOne;
 		this.playerTwo = playerTwo;
+		generateGuessNumber = generateGuessNumber(max);
 	}
 
 	Scanner sc = new Scanner(System.in);
