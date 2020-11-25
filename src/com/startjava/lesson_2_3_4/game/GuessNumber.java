@@ -31,7 +31,7 @@ public class GuessNumber {
 	private void enterNumber(Player player, int i) {
 		System.out.print(player.getName() + ", введите ваше число: ");
 		player.setNumber(sc.nextInt());
-		player.setEnteredNumbers(i);
+		player.setEnteredNumber(i);
 	}
 
 	private void checkMoves(Player player, int i) {
@@ -39,16 +39,17 @@ public class GuessNumber {
 			System.out.println("У вас " + (10 - i) + " попыток");
 
 			enterNumber(playerOne, i);
-			enterNumber(playerTwo, i);
-
 			checkNumber(playerOne, i);
+
+			enterNumber(playerTwo, i);
 			checkNumber(playerTwo, i);
 
-			if (i == 9 && (playerOne.getNumber()  != hiddenNumber && playerTwo.getNumber() != hiddenNumber)) {
+			if (i == 9 && (playerOne.getNumber() != hiddenNumber && playerTwo.getNumber() != hiddenNumber)) {
 				System.out.println("У " + playerOne.getName() + " закончились попытки");
 				showEnterNumbers(playerOne, playerOne.getEnteredNumbers().length);
 				System.out.println("У " + playerTwo.getName() + " закончились попытки");
 				showEnterNumbers(playerTwo, playerTwo.getEnteredNumbers().length);
+				Arrays.fill(player.getEnteredNumbers(), 0);
 			}
 		}
 	}
@@ -59,7 +60,7 @@ public class GuessNumber {
 		} else if (player.getNumber() < hiddenNumber) {
 			System.out.println(player.getName() + ", введенное вами число меньше того, что загадал компьютер");
 		} else if (player.getNumber() == hiddenNumber) {
-			defineWinner(player, playerTwo, i);
+			defineWinner(player, player, i);
 			return;
 		}
 	}
@@ -79,6 +80,6 @@ public class GuessNumber {
 		}
 		System.out.println();
 
-		Arrays.fill(player.getEnteredNumbers(), 0);
+		//Arrays.fill(player.getEnteredNumbers(), 0);
 	}
 }
